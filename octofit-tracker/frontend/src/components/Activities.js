@@ -4,7 +4,7 @@ function Activities() {
     const [activities, setActivities] = useState([]);
 
     useEffect(() => {
-        const apiUrl = `${window.location.hostname.includes('github.dev') ? 'https://shiny-space-happiness-6wjqvpgw4gqc4xrj-8000.app.github.dev' : ''}/api/activity`;
+        const apiUrl = 'https://shiny-space-happiness-6wjqvpgw4gqc4xrj-8000.app.github.dev/api/activities';
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => setActivities(data));
